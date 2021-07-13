@@ -59,6 +59,19 @@ criar({
 
 // criar('Fabio'); // Erro
 
+// Never
+
+function loopInfinito(): never {
+    while (true) { }
+}
+
+function erro(mensagem: string): never {
+    throw new Error(mensagem);
+}
+
+function falha() { // é never tbm
+    return erro('Algo falhou');
+}
 
 
 

@@ -14,7 +14,7 @@ var jogadores; //infinitas posições
 var jogadores2; //Tuple
 jogadores2 = ['Vitor', 'Fulano', 'Cliclano'];
 var jogadores3; //Tuple
-jogadores2 = ['Vitor', true, 34];
+jogadores3 = ['Vitor', true, 34];
 // Enum
 var StatusAprovacao;
 (function (StatusAprovacao) {
@@ -29,3 +29,28 @@ var retornoDaApi = [123, 'Fabio', false];
 var retornoDaApi2 = {
 //....
 };
+// Void
+function printaNaTela(msg) {
+    console.log(msg); //Não retorna nada
+}
+// Null e Undefined
+var u = undefined;
+var n = null;
+// Object
+function criar(objeto) {
+    // ...
+}
+criar({
+    propriedade: 1,
+});
+// criar('Fabio'); // Erro
+// Never
+function loopInfinito() {
+    while (true) { }
+}
+function erro(mensagem) {
+    throw new Error(mensagem);
+}
+function falha() {
+    return erro('Algo falhou');
+}
