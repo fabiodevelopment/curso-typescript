@@ -63,3 +63,26 @@ exibirNota('10');
 exibirNota(10);
 // exibirNota(false) // Erro
 var notaProva; // union Types em Variáveis
+var funcionarios = ['Fabio', 'Fulano', 'Ciclano'];
+var funcionarios2 = [{
+        nome: 'Fabio',
+        sobrenome: 'Haddad',
+        dataNascimento: new Date()
+    },
+    {
+        nome: 'Vitor',
+        sobrenome: 'Farias',
+        dataNascimento: new Date()
+    }];
+function tratarFuncionarios(functionarios) {
+    for (var _i = 0, functionarios_1 = functionarios; _i < functionarios_1.length; _i++) {
+        var funcionario = functionarios_1[_i];
+        console.log('nome do Funcionario: ', funcionario.nome);
+    }
+}
+var altura = 1.6;
+altura = null;
+var contato = {
+    nome: 'Fabio',
+    telefone1: '1199999999',
+};

@@ -85,8 +85,46 @@ exibirNota(10)
 
 let notaProva: number | string; // union Types em Variáveis
 
+// Alias
 
+type Funcionarios = string[];
+const  funcionarios: Funcionarios = ['Fabio', 'Fulano', 'Ciclano'];
 
+type Funcionario = {
+    nome: string;
+    sobrenome: string;
+    dataNascimento: Date;
+}
 
+const  funcionarios2: Funcionario[] = [{
+    nome: 'Fabio',
+    sobrenome: 'Haddad',
+    dataNascimento: new Date()
+},
+{
+    nome: 'Vitor',
+    sobrenome: 'Farias',
+    dataNascimento: new Date()
+}];
 
+function tratarFuncionarios(functionarios: Funcionario[]) {
+    for(let funcionario of functionarios) {
+        console.log('nome do Funcionario: ', funcionario.nome);
+    }
+}
 
+let altura: number | null = 1.6;
+altura = null;
+
+type Contato = {
+    nome: string;
+    telefone1: string;
+    // telefone2: string | null;
+    telefone2?: string; // ? demonstra que este dado é opcional
+}
+
+const contato: Contato = {
+    nome: 'Fabio',
+    telefone1: '1199999999',
+
+}
