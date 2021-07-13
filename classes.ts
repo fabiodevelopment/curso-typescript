@@ -27,8 +27,12 @@ class Carro {
     ){}
 
     private alterarVelocidade(delta: number) {
-        if(this.velocidadeAtual + delta <= this.velocidadeMax) {
-            this.velocidadeAtual += delta;
+        const novaVelocidade = this.velocidadeAtual + delta;
+
+        if (novaVelocidade >= 0 && novaVelocidade <= this.velocidadeMax) {
+            this.velocidadeAtual = novaVelocidade;
+        } else {
+            this.velocidadeAtual = delta > 0 ? this.velocidadeMax : 0;
         }
     }
 
@@ -48,4 +52,26 @@ carro.acelerar();
 carro.frear();
 
 // carro.alterarVelocidade(5) // não posso chamar um metodo privado fora da classe
+
+
+// Herança
+
+class Golf extends Carro {
+    private turbo = false;
+
+    constructor() {
+        super('Volkswagen', 'Golf', 240);
+    }
+    ligarTurbo() {
+        this.turbo = true;
+    }
+} 
+
+const golf = new Golf();
+golf.acelerar();
+golf.frear();
+golf.ligarTurbo();
+
+
+
 
