@@ -54,3 +54,12 @@ function erro(mensagem) {
 function falha() {
     return erro('Algo falhou');
 }
+// Union Types
+function exibirNota(nota) {
+    // console.log('A nota é' + nota);
+    console.log("A nota \u00E9 " + nota);
+}
+exibirNota('10');
+exibirNota(10);
+// exibirNota(false) // Erro
+var notaProva; // union Types em Variáveis

@@ -73,6 +73,20 @@ function falha() { // é never tbm
     return erro('Algo falhou');
 }
 
+// Union Types
+function exibirNota(nota: number | string ) {
+    // console.log('A nota é' + nota);
+    console.log(`A nota é ${nota}`);
+}
+
+exibirNota('10')
+exibirNota(10)
+// exibirNota(false) // Erro
+
+let notaProva: number | string; // union Types em Variáveis
+
+
+
 
 
 
