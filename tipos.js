@@ -86,3 +86,10 @@ var contato = {
     nome: 'Fabio',
     telefone1: '1199999999',
 };
+//Type Assertion
+var minhaIdade = 23;
+minhaIdade.toString();
+// <HTMLInputElement>minhaIdade.toString();
+var input = document.getElementById('numero1');
+// const input = document.getElementById('numero1') as HTMLInputElement;
+console.log(input.value);

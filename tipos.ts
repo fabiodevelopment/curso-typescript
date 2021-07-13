@@ -126,5 +126,14 @@ type Contato = {
 const contato: Contato = {
     nome: 'Fabio',
     telefone1: '1199999999',
-
 }
+
+//Type Assertion
+const minhaIdade: any = 23;
+(minhaIdade as number).toString();
+// <HTMLInputElement>minhaIdade.toString();
+
+const input = <HTMLInputElement>document.getElementById('numero1');
+// const input = document.getElementById('numero1') as HTMLInputElement;
+console.log(input.value);
+
